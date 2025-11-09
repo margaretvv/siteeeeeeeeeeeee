@@ -1,0 +1,599 @@
+:root {
+    --dark-grey: #4F4F4F;
+    --primary-text: #333;
+    --background-light: #f7f9fc;
+    --accent-blue: #00b8d4;
+    --light-blue-bg: #e0f7fa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border-radius: 10px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* Додаємо відступ зверху щоб header не заважав контенту */
+main {
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--dark-grey);
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    font-weight: 500; /* виправлено опечатку */
+}
+
+.main-nav .btn {
+    padding: 8px 20px;
+}
+
+/* Hero (спільно для main.html) */
+.hero {
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://via.placeholder.com/1920x1080/e0f7fa/808080?text=Water+Background') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left; /* вирівнювання по лівому краю */
+    margin-left: -55%; /* зсув лівіше на 20% */
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* --- Секція переваг --- */
+.benefits {
+    padding: 80px 0;
+    background-color: var(--background-light);
+}
+
+.benefits-grid {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit-card img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+/* Info CTA */
+.info-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* центр по горизонталі */
+    gap: 2rem;
+    padding: 60px 0;
+    text-align: center;
+    flex-wrap: wrap; /* щоб елементи коректно обтікали на вузьких екранах */
+}
+
+.info-text {
+    flex: 0 1 600px; /* фіксований максимум, центрована колонка */
+    padding: 40px;
+    text-align: center;
+}
+
+.info-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+}
+
+.info-image {
+    flex: 0 1 360px; /* встановлює ширину колонки з картинкою */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(2,24,26,0.08);
+}
+
+/* Final CTA */
+.final-cta {
+    background-color: var(--light-blue-bg);
+    padding: 60px 0;
+}
+
+.final-cta .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.final-cta h2 {
+    margin: 0;
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo-text {
+    font-weight: 500;
+    color: #888;
+}
+
+.footer-logo-text .logo {
+    display: block;
+    margin-top: 5px;
+    color: var(--primary-text);
+}
+
+.social-icons a {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+/* --- Стили для work.html (об'єднані) --- */
+.main-content {
+    padding: 40px 0;
+}
+
+.calc-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.calc-intro h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.main-image-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.params-section {
+    padding: 60px 0;
+    background: var(--background-light);
+}
+
+.params-grid {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+.param-card {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.param-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* --- Додано: стилі для about.html (контактів) та дрібні узгодження --- */
+
+.contact-section {
+    padding: 60px 0;
+    background: var(--background-light);
+}
+
+.contact-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Ілюстрація контакту */
+.contact-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-illustration img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* Форма контакту */
+.contact-form-wrapper {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.contact-form-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--dark-grey);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--primary-text);
+    background: #fff;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Кнопка відправки у стилі кнопки сайту */
+.submit-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: var(--accent-blue);
+    color: #fff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0098ad;
+}
+
+/* Підтримка для footer-logo (в work.html використовується .footer-logo) */
+.footer-logo {
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+/* Узгодження header: зробити напівпрозорим фон щоб текст під ним не «з'їжджав» */
+.header {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Дрібні правки для однакового відображення footer-елементів */
+.footer .container {
+    gap: 20px;
+}
+
+/* Фонове зображення для всього тіла зображення води */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("img/water.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* забезпечити, щоб елементи були над фоном і були прозорими при потребі */
+.header,
+.hero,
+.benefits,
+.info-cta,
+.final-cta,
+.footer {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* за потреби підвищити контраст тексту (розкоментуйте / підкоригуйте) */
+/*
+.hero .hero-content {
+    background: rgba(255,255,255,0.6);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+*/
+/* Footer icons under WaterCount */
+.footer .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.footer .footer-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.footer .footer-icons a.icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--dark-grey);
+    box-shadow: 0 4px 14px rgba(2,24,26,0.06);
+    transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+    text-decoration: none;
+}
+.hh{
+    border-radius: 10px;
+}
+.footer .footer-icons a.icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.footer .footer-icons a.icon:hover {
+    transform: translateY(-4px);
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+/* small screens: center icons under brand */
+@media (max-width: 700px) {
+    .footer .footer-brand {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .benefits-grid, .params-grid {
+        gap: 20px;
+    }
+
+    .hero { height: 60vh; }
+    .hero-content { max-width: 420px; }
+
+    .contact-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-illustration {
+        order: 1;
+    }
+
+    .contact-form-wrapper {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+
+    .main-nav { display: none; }
+
+    .hero { height: 60vh; text-align: left; } /* залишаємо ліве вирівнювання на мобільних */
+    .hero-content { margin: 0 auto; }
+
+    .benefits-grid {
+        flex-direction: column;
+    }
+
+    .info-cta {
+        flex-direction: column;
+    }
+
+    .info-text {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .final-cta .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .final-cta h2 {
+        margin-bottom: 20px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo-text {
+        margin-bottom: 20px;
+    }
+
+    /* Робота з params-grid на мобільних */
+    .params-grid {
+        flex-direction: column;
+    }
+
+    .param-card {
+        padding: 20px;
+    }
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    main {
+        padding-top: 90px;
+    }
+}
+
+    /* fn + f5*/
+    /* ctrl + s*/
